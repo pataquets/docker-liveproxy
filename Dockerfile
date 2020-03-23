@@ -1,5 +1,6 @@
-FROM python:3
+FROM pataquets/streamlink
 
-RUN pip install --no-cache-dir liveproxy
+RUN \
+  pip install --no-cache-dir liveproxy
 
 ENTRYPOINT [ "liveproxy" ]
